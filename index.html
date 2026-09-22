@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enemy AI Docs</title>
+  <meta name="description" content="Documentation for Enemy AI — networked FSM enemies for Photon Fusion 2 and single-player Unity projects, by 2 Dude Studios.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="assets/2dude-logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <div id="app">Loading documentation…</div>
+  <script>
+    window.$docsify = {
+      name: 'Enemy AI',
+      nameLink: '#/',
+      logo: 'assets/2dude-logo.png',
+      loadSidebar: true,
+      alias: { '/.*/_sidebar.md': '/_sidebar.md' },
+      subMaxLevel: 2,
+      sidebarDisplayLevel: 1,
+      auto2top: true,
+      executeScript: false,
+      notFoundPage: true,
+      search: {
+        placeholder: 'Search the docs',
+        noData: 'No results.',
+        depth: 3,
+        paths: 'auto'
+      },
+      copyCode: { buttonText: 'Copy', successText: 'Copied' },
+      pagination: { previousText: 'Previous', nextText: 'Next', crossChapter: true, crossChapterText: true },
+      plugins: [
+        // Footer on every page
+        function (hook) {
+          hook.afterEach(function (html) {
+            return html + '<footer class="site-footer">© 2 Dude Studios · Enemy AI for Photon Fusion 2 · ' +
+              '<a href="#/reference/changelog">Changelog</a> · <a href="#/reference/third-party">Third-party notices</a></footer>';
+          });
+        }
+      ]
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+</body>
+</html>
