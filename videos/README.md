@@ -15,8 +15,7 @@ so you can watch first and then read the details.
     </div>
   </div>
   <div class="video-card" id="installation-fusion">
-    <div class="video-pending">🎬 Photon Fusion 2 installation<br>Coming soon</div>
-    <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Fusion installation guide" allowfullscreen></iframe> -->
+    <video controls preload="metadata" src="videos/installation-fusion.mp4"></video>
     <div class="video-body">
       <h4>Photon Fusion 2 installation</h4>
       <p>Fusion SDK, FSM and Simple KCC addons, weaver registration, App ID.</p>

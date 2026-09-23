@@ -23,9 +23,8 @@ It defaults to the sibling folder `../Enemy-AI-Fusion-FSM`; pass the path to
 ## Videos
 
 Files under `videos/` are served straight from the repo. Keep each under
-GitHub's 100 MB limit (the Fusion installation guide is over it, so it is
-git-ignored and should go on YouTube). To embed a YouTube video, replace the
-`<video>` or `.video-pending` element with:
+GitHub's 100 MB limit (re-encode if needed; the Fusion guide is 79 MB). To
+host one on YouTube instead, replace its `<video>` element with:
 
 ```html
 <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="..." allowfullscreen></iframe>

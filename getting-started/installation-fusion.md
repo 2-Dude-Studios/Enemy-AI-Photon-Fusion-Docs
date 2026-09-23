@@ -7,10 +7,7 @@ nothing on this page applies.
 Requires **Unity 6000.0 LTS or newer** and three free downloads from Photon.
 
 <div class="video-single video-card">
-  <div class="video-pending">🎬 Fusion installation walkthrough<br>Video coming soon. The written steps below cover everything shown in it.</div>
-  <!-- When the video is on YouTube, replace the div above with:
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Fusion installation guide" allowfullscreen></iframe>
-  -->
+  <video controls preload="metadata" src="videos/installation-fusion.mp4"></video>
   <div class="video-body">
     <h4>Fusion installation guide</h4>
     <p>Fusion SDK, the two addons, weaver registration and the App ID. About five minutes.</p>
