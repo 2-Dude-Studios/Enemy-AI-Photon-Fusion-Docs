@@ -60,6 +60,14 @@ falling back to cover.
       <div class="video-links"><a href="#/guides/archetypes">Archetype: Shooter</a><a href="#/getting-started/required-setup">Cover layer setup</a></div>
     </div>
   </div>
+  <div class="video-card" id="standalone-waves">
+    <video controls preload="metadata" src="videos/standalone-waves.mp4"></video>
+    <div class="video-body">
+      <h4>Waves</h4>
+      <p>The wave spawner in single-player: horde enemies that call for help and never retreat.</p>
+      <div class="video-links"><a href="#/guides/archetypes">Archetype: Waves</a></div>
+    </div>
+  </div>
 </div>
 
 ## Networked enemies (Photon Fusion 2)
@@ -92,9 +100,16 @@ clients render the replicated state.
       <div class="video-links"><a href="#/guides/archetypes">Archetype: Waves</a></div>
     </div>
   </div>
+  <div class="video-card" id="fusion-waves-multiple-enemies">
+    <video controls preload="metadata" src="videos/fusion-waves-multiple-enemies.mp4"></video>
+    <div class="video-body">
+      <h4>Waves with mixed enemies over Fusion</h4>
+      <p>Waves that mix enemy types, spawned and replicated by the networked spawner.</p>
+      <div class="video-links"><a href="#/guides/archetypes">Archetype: Waves</a><a href="#/networking/fusion-setup">Fusion setup</a></div>
+    </div>
+  </div>
 </div>
 
 ## Coming later
 
-- Waves in single-player, and waves with mixed enemy types over Fusion
 - Boss phases

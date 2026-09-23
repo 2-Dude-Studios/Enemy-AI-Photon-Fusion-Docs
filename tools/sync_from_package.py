@@ -84,10 +84,10 @@ INJECTIONS = {
     "README.md":     [("first-rule", HOME_BANNER),
                       ("## What's in the box", callout("editor"))],
     "QuickStart.md": [("# Quick start", callout("install", "editor", "melee"))],
-    "FusionSetup.md": [("## Setting up a scene", callout("fu-melee", "fu-shooter", "fu-waves"))],
+    "FusionSetup.md": [("## Setting up a scene", callout("fu-melee", "fu-shooter", "fu-waves", "fu-multi"))],
     "Archetypes.md": [("## Custom", callout("melee", "fu-melee")),
                       ("## Shooter", callout("shooter", "fu-shooter")),
-                      ("## Waves", callout("fu-waves"))],
+                      ("## Waves", callout("waves", "fu-waves", "fu-multi"))],
 }
 
 def apply_injections(pkg_file: str, text: str) -> str:

@@ -117,7 +117,7 @@ need it, treat that as custom work.
 
 ## Setting up a scene
 
-> 🎬 **See it in action:** [Melee over Fusion](/videos/?id=fusion-melee) · [Shooter over Fusion](/videos/?id=fusion-shooter) · [Waves over Fusion](/videos/?id=fusion-waves)
+> 🎬 **See it in action:** [Melee over Fusion](/videos/?id=fusion-melee) · [Shooter over Fusion](/videos/?id=fusion-shooter) · [Waves over Fusion](/videos/?id=fusion-waves) · [Waves with mixed enemies over Fusion](/videos/?id=fusion-waves-multiple-enemies)
 
 
 The fastest route is to open the **Fusion sample scene** and use it as your

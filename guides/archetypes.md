@@ -103,7 +103,7 @@ which it will shoot, and Validate will tell you so.
 
 ## Waves — horde fodder
 
-> 🎬 **See it in action:** [Waves over Fusion](/videos/?id=fusion-waves)
+> 🎬 **See it in action:** [Waves](/videos/?id=standalone-waves) · [Waves over Fusion](/videos/?id=fusion-waves) · [Waves with mixed enemies over Fusion](/videos/?id=fusion-waves-multiple-enemies)
 
 
 Built to be spawned in numbers: wide awareness, fast to spot you, quick to

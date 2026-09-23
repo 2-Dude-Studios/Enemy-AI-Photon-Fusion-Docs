@@ -1,5 +1,2 @@
 Thumbs.db
 .DS_Store
-# Over GitHub's 100 MB file limit - re-encode smaller, then remove these lines
-videos/fusion-waves-multiple-enemies.mp4
-videos/standalone-waves.mp4

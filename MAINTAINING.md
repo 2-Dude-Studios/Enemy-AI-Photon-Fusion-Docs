@@ -51,10 +51,6 @@ then open <http://localhost:8765>.
 
 ## To do
 
-- Compress `videos/standalone-waves.mp4` (107 MB) and
-  `videos/fusion-waves-multiple-enemies.mp4` (104 MB) under 100 MB, remove
-  their lines from `.gitignore`, and add their cards to `videos/README.md`
-  (the "Coming later" list names them).
 - Make the tutorial videos shorter (the Fusion install guide is 3:26 / 79 MB).
 - Add subtitles. The narration scripts already exist as `.docx` files next to
   the captures; convert each to a WebVTT file in `videos/` and add
