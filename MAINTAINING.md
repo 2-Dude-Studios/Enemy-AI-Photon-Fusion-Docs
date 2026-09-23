@@ -48,3 +48,11 @@ python -m http.server 8765
 ```
 
 then open <http://localhost:8765>.
+
+## To do
+
+- Make the tutorial videos shorter (the Fusion install guide is 3:26 / 79 MB).
+- Add subtitles. The narration scripts already exist as `.docx` files next to
+  the captures; convert each to a WebVTT file in `videos/` and add
+  `<track kind="subtitles" src="videos/<name>.vtt" srclang="en" label="English" default>`
+  inside the matching `<video>` element.
