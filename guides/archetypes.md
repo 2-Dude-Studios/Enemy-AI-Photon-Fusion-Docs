@@ -25,7 +25,7 @@ Everything here works identically on both runtimes. Pick **Standalone** or
 
 ## Custom — the melee baseline
 
-> 🎬 **See it in action:** [Melee enemy](/videos/?id=standalone-melee) · [Melee jump-lunge](/videos/?id=melee-jump-lunge) · [Melee over Fusion](/videos/?id=fusion-melee)
+> 🎬 **See it in action:** [Melee enemy](/videos/?id=standalone-melee) · [Melee over Fusion](/videos/?id=fusion-melee)
 
 
 Vision, random patrol, aggressive chase, melee attack with a jump-lunge, and

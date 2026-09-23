@@ -47,7 +47,6 @@ def rewrite_links(text: str) -> str:
 
 VIDEO = {
     "melee":      ("/videos/?id=standalone-melee",              "Melee enemy"),
-    "jump":       ("/videos/?id=melee-jump-lunge",              "Melee jump-lunge"),
     "shooter":    ("/videos/?id=standalone-shooter",            "Shooter enemy"),
     "waves":      ("/videos/?id=standalone-waves",              "Waves"),
     "fu-melee":   ("/videos/?id=fusion-melee",                  "Melee over Fusion"),
@@ -86,7 +85,7 @@ INJECTIONS = {
                       ("## What's in the box", callout("editor"))],
     "QuickStart.md": [("# Quick start", callout("install", "editor", "melee"))],
     "FusionSetup.md": [("## Setting up a scene", callout("fu-melee", "fu-shooter", "fu-waves"))],
-    "Archetypes.md": [("## Custom", callout("melee", "jump", "fu-melee")),
+    "Archetypes.md": [("## Custom", callout("melee", "fu-melee")),
                       ("## Shooter", callout("shooter", "fu-shooter")),
                       ("## Waves", callout("fu-waves"))],
 }
