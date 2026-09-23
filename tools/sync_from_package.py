@@ -46,10 +46,16 @@ def rewrite_links(text: str) -> str:
 # ---- video callouts injected into synced pages ---------------------------
 
 VIDEO = {
-    "melee":   ("/videos/?id=melee-patrol-rush-attack",      "Melee: patrol, rush, attack"),
-    "jump":    ("/videos/?id=melee-jump-lunge",              "Melee: jump-lunge attack"),
-    "shooter": ("/videos/?id=shooter-patrol-rush-attack-flee", "Shooter: patrol, rush, fire, fall back to cover"),
-    "install": ("/getting-started/installation-standalone.md", "Installing the package (video)"),
+    "melee":      ("/videos/?id=standalone-melee",              "Melee enemy"),
+    "jump":       ("/videos/?id=melee-jump-lunge",              "Melee jump-lunge"),
+    "shooter":    ("/videos/?id=standalone-shooter",            "Shooter enemy"),
+    "waves":      ("/videos/?id=standalone-waves",              "Waves"),
+    "fu-melee":   ("/videos/?id=fusion-melee",                  "Melee over Fusion"),
+    "fu-shooter": ("/videos/?id=fusion-shooter",                "Shooter over Fusion"),
+    "fu-waves":   ("/videos/?id=fusion-waves",                  "Waves over Fusion"),
+    "fu-multi":   ("/videos/?id=fusion-waves-multiple-enemies", "Waves with mixed enemies over Fusion"),
+    "editor":     ("/videos/?id=editor-tools",                  "Editor tools walkthrough"),
+    "install":    ("/getting-started/installation-standalone.md", "Installing the package"),
 }
 
 def callout(*keys):
@@ -76,10 +82,13 @@ HOME_BANNER = """
 """
 
 INJECTIONS = {
-    "README.md":     [("first-rule", HOME_BANNER)],
-    "QuickStart.md": [("# Quick start", callout("install", "melee"))],
-    "Archetypes.md": [("## Custom", callout("melee", "jump")),
-                      ("## Shooter", callout("shooter"))],
+    "README.md":     [("first-rule", HOME_BANNER),
+                      ("## What's in the box", callout("editor"))],
+    "QuickStart.md": [("# Quick start", callout("install", "editor", "melee"))],
+    "FusionSetup.md": [("## Setting up a scene", callout("fu-melee", "fu-shooter", "fu-waves"))],
+    "Archetypes.md": [("## Custom", callout("melee", "jump", "fu-melee")),
+                      ("## Shooter", callout("shooter", "fu-shooter")),
+                      ("## Waves", callout("fu-waves"))],
 }
 
 def apply_injections(pkg_file: str, text: str) -> str:

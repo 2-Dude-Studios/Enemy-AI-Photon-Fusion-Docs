@@ -1,6 +1,6 @@
 # Quick start
 
-> 🎬 **See it in action:** [Installing the package (video)](/getting-started/installation-standalone.md) · [Melee: patrol, rush, attack](/videos/?id=melee-patrol-rush-attack)
+> 🎬 **See it in action:** [Installing the package](/getting-started/installation-standalone.md) · [Editor tools walkthrough](/videos/?id=editor-tools) · [Melee enemy](/videos/?id=standalone-melee)
 
 
 Goal: an enemy that patrols, spots you, chases you down and attacks — running

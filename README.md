@@ -72,6 +72,9 @@ then follow [Photon Fusion 2 setup](/networking/fusion-setup.md).
 
 ## What's in the box
 
+> 🎬 **See it in action:** [Editor tools walkthrough](/videos/?id=editor-tools)
+
+
 **Runtime**
 
 - `EnemyAI.Core` — the AI itself: senses, patrol, chase, attack, injured and

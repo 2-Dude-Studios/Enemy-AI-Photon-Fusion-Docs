@@ -117,6 +117,9 @@ need it, treat that as custom work.
 
 ## Setting up a scene
 
+> 🎬 **See it in action:** [Melee over Fusion](/videos/?id=fusion-melee) · [Shooter over Fusion](/videos/?id=fusion-shooter) · [Waves over Fusion](/videos/?id=fusion-waves)
+
+
 The fastest route is to open the **Fusion sample scene** and use it as your
 reference rig, rather than assembling one from parts. It shows a working
 arrangement of the bootstrapper, spawn manager and target manager, with an

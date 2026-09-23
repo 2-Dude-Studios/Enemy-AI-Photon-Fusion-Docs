@@ -25,7 +25,7 @@ Everything here works identically on both runtimes. Pick **Standalone** or
 
 ## Custom — the melee baseline
 
-> 🎬 **See it in action:** [Melee: patrol, rush, attack](/videos/?id=melee-patrol-rush-attack) · [Melee: jump-lunge attack](/videos/?id=melee-jump-lunge)
+> 🎬 **See it in action:** [Melee enemy](/videos/?id=standalone-melee) · [Melee jump-lunge](/videos/?id=melee-jump-lunge) · [Melee over Fusion](/videos/?id=fusion-melee)
 
 
 Vision, random patrol, aggressive chase, melee attack with a jump-lunge, and
@@ -68,7 +68,7 @@ it's off by default.
 
 ## Shooter — ranged, kiting, cover-seeking
 
-> 🎬 **See it in action:** [Shooter: patrol, rush, fire, fall back to cover](/videos/?id=shooter-patrol-rush-attack-flee)
+> 🎬 **See it in action:** [Shooter enemy](/videos/?id=standalone-shooter) · [Shooter over Fusion](/videos/?id=fusion-shooter)
 
 
 Holds around 12 m, fires on a cooldown, and retreats to cover when you close
@@ -102,6 +102,9 @@ which it will shoot, and Validate will tell you so.
 ---
 
 ## Waves — horde fodder
+
+> 🎬 **See it in action:** [Waves over Fusion](/videos/?id=fusion-waves)
+
 
 Built to be spawned in numbers: wide awareness, fast to spot you, quick to
 re-engage, calls for help, and never retreats.
