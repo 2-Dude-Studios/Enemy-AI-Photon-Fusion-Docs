@@ -40,7 +40,7 @@ Full context: [Required project setup](/getting-started/required-setup.md).
 | Configurator offers only "Standalone" | Fusion or the FSM addon isn't installed; check the console line from Step 3 |
 | Session never starts | No Photon App ID, or no internet — Fusion's cloud name server is required even on a LAN |
 | Enemies frozen on clients, fine on host | Working as intended — clients don't simulate AI. If they're frozen on the *host* too, that's a NavMesh or target problem, not networking |
-| Enemies do nothing at all | Confirm the scene's target registration; run `Tools ▸ EnemyAI ▸ Scene Doctor` |
+| Enemies do nothing at all | The player prefab needs a `NetworkedTarget`, and the session must run in Host or Server mode; also run `Tools ▸ EnemyAI ▸ Scene Doctor` |
 | `does not implement interface member 'INetworkRunnerCallbacks....'` | Your Fusion is newer than the version this was validated against and Photon changed a callback signature. See **Newer Fusion versions** below — it is a two-line fix. |
 
 Full context: [Photon Fusion 2 setup](/networking/fusion-setup.md), including the fix for newer Fusion versions.

@@ -36,13 +36,22 @@ Two things make this extensible:
 ```csharp
 public interface IAbility
 {
-    void Enter();   // called once when the state becomes active
-    void Tick();    // called every fixed step while active
-    void Exit();    // called once when leaving
+    // Simulation — fixed step, only on the peer that simulates the enemy
+    void Enter();         // once when the state becomes active
+    void Tick();          // every fixed step while active
+    void Exit();          // once when leaving
+
+    // Render — once per frame, on every peer, after the state's base animation
+    void EnterRender();   // e.g. override the state's animation
+    void Render();        // per-frame presentation
+    void ExitRender();
 }
 ```
 
-That's the whole contract. A minimal example:
+Put logic in the simulation hooks and visuals (animation overrides,
+effects) in the render hooks. Both runtimes call both sets, so an ability
+never needs to know which runtime it is running in. Leave a render hook
+empty when there's nothing to show. A minimal example:
 
 ```csharp
 using EnemyAI.Core;
@@ -73,6 +82,10 @@ public class CircleStrafe : IAbility
     }
 
     public void Exit() { }
+
+    public void EnterRender() { }
+    public void Render() { }
+    public void ExitRender() { }
 }
 ```
 
@@ -83,6 +96,7 @@ public class CircleStrafe : IAbility
 | `SetDestination`, `SetSpeed`, `SetStoppingDistance` | movement |
 | `Transform`, `GameObject` | the usual |
 | `DeltaTime` | the correct step for this runtime |
+| `SimulationTime` | the clock `DeltaTime` steps — use it for any timestamp you store, never `Time.time` |
 | `Blackboard` | current target, distance, current state |
 | `Registry` | the ability systems, for swapping |
 | `HasSimulationAuthority` | true standalone; host-only under Fusion |

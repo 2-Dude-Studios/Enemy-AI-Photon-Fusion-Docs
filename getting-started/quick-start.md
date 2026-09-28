@@ -30,7 +30,13 @@ Open **`Tools ▸ EnemyAI ▸ Enemy Configurator`**.
 5. Hit **Validate**, then **Apply**.
 
 You now have seven ScriptableObjects describing the enemy and a prefab wired
-to them, selected in the Project window.
+to them, all in their own folder — `<Folder>/MyEnemy/` — with the prefab
+selected in the Project window.
+
+To change the enemy later, select its definition asset and click **Open in
+Enemy Configurator**; Apply then updates it in place. Applying a *new* enemy
+with a name that already exists asks whether to update that one or make a
+copy.
 
 > **When you start tuning speeds, keep them whole numbers.** The animator's
 > speed parameter is an integer, so `2.5` moves the enemy at 2.5 while playing
@@ -110,6 +116,7 @@ them directly, or reopen the Configurator.
 | Reach of the melee attack | `Combat ▸ attackRange` |
 | Toughness | `Stats ▸ MaxHealth` |
 | Whether it flees when hurt | `Behavior Options ▸ fleeOnLowHealth` |
+| Whether a fled enemy heals back to full between fights | `Behavior Options ▸ regenerateToFullOutOfCombat` (off: it rejoins at `Stats ▸ RecoveredHealthCap` and heals no further) |
 
 Two settings that behave differently than you might expect:
 

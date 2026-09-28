@@ -54,11 +54,16 @@ controller, so skip it if you delete the samples.
 
 ## Check it worked
 
-The console prints a one-time line once both dependencies are detected:
+The console prints a one-time line once both dependencies are detected, and a
+second one when Simple KCC is present too (the sample scenes need it):
 
 ```
 [EnemyAI] Fusion + FSM addon detected — enabled ENEMYAI_FUSION.
+[EnemyAI] SimpleKCC addon detected — enabled ENEMYAI_SIMPLEKCC. The Fusion demo scenes will now compile.
 ```
+
+Without the second line the networked runtime still works, but the Fusion
+sample scenes show missing scripts.
 
 After that, the Enemy Configurator's **Runtime** dropdown offers **Fusion**
 alongside Standalone, and `NetworkedEnemy` appears in the Add Component menu.

@@ -29,12 +29,16 @@ What you need beyond that depends on which runtime you use:
 |---|---|---|
 | Photon Fusion 2 | not needed | **required** |
 | Fusion FSM addon | not needed | **required** |
-| Input System | not needed | required |
-| Extra packages | none | TextMesh Pro, Mathematics |
+| Photon SimpleKCC addon | not needed | demo scenes only |
+| Input System package | demo scenes only | demo scenes only |
+| AI Navigation package | to bake NavMeshes | to bake NavMeshes |
 
 The single-player runtime has **no external dependencies at all** — it needs
-nothing but Unity. The editor tooling additionally uses Unity's **AI
-Navigation** package for the demo-scene builder.
+nothing from outside Unity. Every Unity package above is optional at compile
+time: without it, the part that needs it (a demo scene's player controller,
+the demo-scene builder's NavMesh bake) is left out and everything else still
+compiles. The debug health label on the template prefabs uses TextMesh Pro,
+which ships inside uGUI in Unity 6.
 
 ### If you want the networked runtime, read this
 

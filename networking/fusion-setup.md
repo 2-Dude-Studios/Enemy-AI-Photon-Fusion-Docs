@@ -20,6 +20,12 @@ Install **both** downloads from Photon (both free):
 The FSM addon is a **separate download** from the Fusion SDK. The networked
 state machine is built on it — Fusion on its own is not enough.
 
+**For the Fusion demo scenes only**, also install Photon's **SimpleKCC addon**
+(`Fusion.Addons.SimpleKCC`, free) and Unity's **Input System** package. The
+demo's player controller is built on them; the networked enemy runtime never
+touches either. Until both are present the demo scripts are simply left out of
+compilation — no errors, but the `FU_*` scenes will show missing scripts.
+
 Once both are present, this package detects them and enables its networked
 assemblies automatically. You never set a scripting define by hand.
 
@@ -120,10 +126,10 @@ need it, treat that as custom work.
 > 🎬 **See it in action:** [Melee over Fusion](/videos/?id=fusion-melee) · [Shooter over Fusion](/videos/?id=fusion-shooter) · [Waves over Fusion](/videos/?id=fusion-waves) · [Waves with mixed enemies over Fusion](/videos/?id=fusion-waves-multiple-enemies)
 
 
-The fastest route is to open the **Fusion sample scene** and use it as your
-reference rig, rather than assembling one from parts. It shows a working
-arrangement of the bootstrapper, spawn manager and target manager, with an
-enemy already wired.
+The fastest route is to open a **Fusion sample scene** (`FU_*`) and use it as
+your reference rig, rather than assembling one from parts. It shows a working
+arrangement of the demo launcher and spawn manager, with an enemy already
+wired.
 
 Two things to carry across into your own scenes:
 
@@ -138,6 +144,24 @@ warns you if you mix them up.
 
 ---
 
+## Using your own launcher
+
+`FusionBootstrapper` and `SpawnManager` are **demo launchers**. The enemy
+runtime doesn't depend on them, so keep whatever code already starts your
+session. The only requirements:
+
+- **Start the `NetworkRunner` in Host or Server mode.** Enemy authority comes
+  from Fusion itself (`Object.HasStateAuthority`), so whichever peer holds
+  state authority runs the AI.
+- **Put a `NetworkedTarget` on your player prefab.** Targets register
+  themselves when they spawn — there is no manager object to place or spawn.
+- **Spawners find the runner on their own.** `NetworkedWaveSpawner` and
+  `EnemySpawner` use the runner that owns their scene, or the first
+  running one. With several runners in one process, assign it explicitly in
+  their optional **Runner** field.
+
+---
+
 ## Troubleshooting
 
 | What you see | Cause |
@@ -147,7 +171,7 @@ warns you if you mix them up.
 | Configurator offers only "Standalone" | Fusion or the FSM addon isn't installed; check the console line from Step 3 |
 | Session never starts | No Photon App ID, or no internet — Fusion's cloud name server is required even on a LAN |
 | Enemies frozen on clients, fine on host | Working as intended — clients don't simulate AI. If they're frozen on the *host* too, that's a NavMesh or target problem, not networking |
-| Enemies do nothing at all | Confirm the scene's target registration; run `Tools ▸ EnemyAI ▸ Scene Doctor` |
+| Enemies do nothing at all | The player prefab needs a `NetworkedTarget`, and the session must run in Host or Server mode; also run `Tools ▸ EnemyAI ▸ Scene Doctor` |
 | `does not implement interface member 'INetworkRunnerCallbacks....'` | Your Fusion is newer than the version this was validated against and Photon changed a callback signature. See **Newer Fusion versions** below — it is a two-line fix. |
 
 ---

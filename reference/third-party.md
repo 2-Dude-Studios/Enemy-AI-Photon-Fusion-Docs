@@ -21,8 +21,10 @@ both are obtained from Photon Engine under Photon's own licence terms.
 |---|---|---|
 | Photon Fusion 2 | 2.0.12 | [photonengine.com](https://www.photonengine.com/fusion) |
 | Fusion FSM addon (`Fusion.Addons.FSM`) | 2.0.5 | Photon addons |
+| SimpleKCC addon (`Fusion.Addons.SimpleKCC`) — **Fusion demo scenes only** | 2.0.15 | Photon addons |
 
-The single-player runtime requires neither.
+The single-player runtime requires none of them. The networked runtime needs
+Fusion and the FSM addon; SimpleKCC is used only by the demo scenes' player.
 
 ---
 
@@ -34,9 +36,8 @@ Package Manager — not included here:
 | Package | Used by |
 |---|---|
 | AI Navigation | `NavMeshSurface` in the demo-scene builder (editor only) |
-| Input System | The Fusion bootstrapper, and the sample player controllers |
-| TextMesh Pro | Networked runtime UI |
-| Mathematics | Networked runtime |
+| Input System | The sample player controllers, and the Fusion bootstrapper's demo WASD input (optional — without it that input is compiled out) |
+| TextMesh Pro | Debug health label on the template prefabs (ships inside uGUI in Unity 6) |
 
 The runtime AI uses Unity's built-in `NavMeshAgent`, which needs no package.
 
