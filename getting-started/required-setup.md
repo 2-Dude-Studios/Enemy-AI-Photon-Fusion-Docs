@@ -111,6 +111,16 @@ otherwise enemies path straight through the new walls.
 
 ---
 
+## TextMesh Pro essentials
+
+The enemy's floating health label uses TextMesh Pro's default font, which
+lives in TMP's **Essential Resources** rather than in this package. If your
+project hasn't imported them yet, Unity usually offers to the first time a
+label appears; otherwise use `Window ▸ TextMeshPro ▸ Import TMP Essential
+Resources`. Until then the label is blank — the AI itself is unaffected.
+
+---
+
 ## Troubleshooting
 
 Symptom first, because that's how you'll arrive here.
@@ -125,6 +135,7 @@ Symptom first, because that's how you'll arrive here.
 | Enemies are permanently blind | The floor is on the sight-blocker layer; take it off |
 | Enemy walks in place | The animator has no transition for the state it entered |
 | Enemy slides instead of running | A non-whole-number speed — the animator's speed parameter is an integer |
+| Health label above the enemy is blank | TMP Essential Resources not imported; see above |
 
 When in doubt, run **Scene Doctor**. Every check it makes corresponds to a
 real failure that has bitten this AI before.

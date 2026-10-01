@@ -27,6 +27,7 @@ What you need beyond that depends on which runtime you use:
 
 | | Single-player (standalone) | Networked (Fusion) |
 |---|---|---|
+| uGUI package (includes TextMesh Pro) | **required** | **required** |
 | Photon Fusion 2 | not needed | **required** |
 | Fusion FSM addon | not needed | **required** |
 | Photon SimpleKCC addon | not needed | demo scenes only |
@@ -34,11 +35,14 @@ What you need beyond that depends on which runtime you use:
 | AI Navigation package | to bake NavMeshes | to bake NavMeshes |
 
 The single-player runtime has **no external dependencies at all** — it needs
-nothing from outside Unity. Every Unity package above is optional at compile
-time: without it, the part that needs it (a demo scene's player controller,
-the demo-scene builder's NavMesh bake) is left out and everything else still
-compiles. The debug health label on the template prefabs uses TextMesh Pro,
-which ships inside uGUI in Unity 6.
+nothing from outside Unity. uGUI is the one Unity package the AI itself needs:
+the enemy's world-space health label uses TextMesh Pro, which ships inside
+uGUI in Unity 6. Every Unity 6 project template already includes it; only a
+project that removed it will see `TMPro` compile errors. (The label's font
+comes from TMP's Essential Resources — see [Required project setup](/getting-started/required-setup.md).) The other Unity
+packages above are optional at compile time: without one, the part that
+needs it (a demo scene's player controller, the demo-scene builder's NavMesh
+bake) is left out and everything else still compiles.
 
 ### If you want the networked runtime, read this
 

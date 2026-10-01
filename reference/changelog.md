@@ -8,7 +8,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ## [1.0.0] — Initial release
 
-First public release. Requires **Unity 6000.0 LTS** or newer.
+First public release. Requires **Unity 6000.0 LTS** or newer, with the uGUI
+package (included in every Unity 6 template).
 
 ### Two runtimes, one AI
 
