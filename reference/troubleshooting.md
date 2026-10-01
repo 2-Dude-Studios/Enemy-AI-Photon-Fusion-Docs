@@ -24,6 +24,7 @@ culprit.
 | Enemy walks in place | The animator has no transition for the state it entered |
 | Enemy slides instead of running | A non-whole-number speed — the animator's speed parameter is an integer |
 | Health label above the enemy is blank | TMP Essential Resources not imported; see the setup page |
+| Demo enemies and props render pink | The project isn't on URP — the demo content is authored for it (see the Render pipeline note in [Overview](/)) |
 
 When in doubt, run **Scene Doctor**. Every check it makes corresponds to a
 real failure that has bitten this AI before.

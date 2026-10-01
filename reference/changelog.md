@@ -9,7 +9,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 ## [1.0.0] — Initial release
 
 First public release. Requires **Unity 6000.0 LTS** or newer, with the uGUI
-package (included in every Unity 6 template).
+package (included in every Unity 6 template). The AI works with any render
+pipeline; the demo content is authored for URP.
 
 ### Two runtimes, one AI
 

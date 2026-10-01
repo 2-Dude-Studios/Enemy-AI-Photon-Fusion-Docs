@@ -23,6 +23,13 @@ and an editor window; you don't have to write code to ship a working enemy.
 
 **Unity 6000.0 LTS or newer.**
 
+**Render pipeline:** the AI itself works with any render pipeline. The demo
+content — the enemy art's materials and the sample scenes' lighting — is
+authored for **URP** (Unity 6's default 3D template). In a Built-in or HDRP
+project the demo materials render pink and the sample scenes' lights and
+player camera show a missing script (URP's extra light/camera data); convert the materials with your pipeline's material
+converter, or swap in your own art.
+
 What you need beyond that depends on which runtime you use:
 
 | | Single-player (standalone) | Networked (Fusion) |
