@@ -47,32 +47,38 @@ The runtime AI uses Unity's built-in `NavMeshAgent`, which needs no package.
 
 ### Character model and animations
 
-The demo enemy — model, rig and every animation clip — comes from:
+The demo enemy's model, rig and animation clips come from two CC0 sources:
 
-> **Quaternius Universal Standard Library** — by [@Quaternius](https://www.patreon.com/quaternius)
+> **Quaternius Universal Animation Library** — by [@Quaternius](https://www.patreon.com/quaternius)
 > Licensed **CC0 1.0 Universal (Public Domain Dedication)**
 > <https://creativecommons.org/publicdomain/zero/1.0/>
 
+> **Mesh2Motion animation library** — <https://mesh2motion.org>
+> ([source](https://github.com/Mesh2Motion/mesh2motion-app)); its art assets,
+> animations included, are licensed **CC0 1.0 Universal**. Exported from the
+> Mesh2Motion web app onto the model above.
+
 CC0 places the work in the public domain, which permits redistribution as part
 of this package. No attribution is legally required; it is given here because
-the work deserves it, and supporting the author is encouraged.
+the work deserves it, and supporting the authors is encouraged.
 
-Everything sits under `Assets/EnemyAI/Content/Art/Quaternius/`, with the full
-licence text alongside it in `License.txt`:
+Everything sits under `Assets/EnemyAI/Content/Art/Quaternius/`, with the
+Quaternius licence text alongside it in `License.txt`:
 
-| File | Used for |
-|---|---|
-| `UAL1_Standard.fbx` | the enemy model and rig |
-| `UAL1_Standard_Collider.prefab` | ragdoll collider rig |
-| `Armature_Idle_Loop.anim` | idle, and the Base Layer routing hub |
-| `Armature_Walk_Loop.anim` | patrol |
-| `Armature_Sprint_Loop.anim` | chase |
-| `Armature_Punch_Jab.anim` | attack 1 |
-| `Armature_Punch_Cross.anim` | attack 2 |
-| `Armature_Pistol_Shoot.anim` | ranged attack |
-| `Armature_Death01.anim` | death |
-| `Skinned Mesh 0_Jump_2_RM.anim` | jump lunge |
-| `Skinned Mesh 0_Run_Wounded.anim` | injured walk |
+| File | Used for | Source |
+|---|---|---|
+| `UAL1_Standard.fbx` | the enemy model and rig | Quaternius |
+| `UAL1_Standard_Collider.prefab` | ragdoll collider rig | built from the Quaternius model |
+| `Armature_Idle_Loop.anim` | idle, and the Base Layer routing hub | Quaternius |
+| `Armature_Walk_Loop.anim` | patrol | Quaternius |
+| `Armature_Sprint_Loop.anim` | chase | Quaternius |
+| `Armature_Punch_Jab.anim` | attack 1 | Quaternius |
+| `Armature_Punch_Cross.anim` | attack 2 | Quaternius |
+| `Armature_Pistol_Shoot.anim` | ranged attack | Quaternius |
+| `Armature_Death01.anim` | death | Quaternius |
+| `Skinned Mesh 0_Jump_2_RM.anim` | jump lunge | Mesh2Motion (`Jump_2_RM`) |
+| `Skinned Mesh 0_Run_Wounded.anim` | injured walk | Mesh2Motion (renamed clip) |
+| `Unity_Setup.png` | the author's Unity import guide, shipped with the model | Quaternius |
 
 The avatar (`Content/Animation/UAL1_StandardAvatar.asset`) is derived from the
 model above. The animator controller, avatar mask and all other content under
