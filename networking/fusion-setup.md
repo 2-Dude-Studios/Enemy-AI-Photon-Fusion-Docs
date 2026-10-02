@@ -14,7 +14,7 @@ Install **both** downloads from Photon (both free):
 
 | | Validated against |
 |---|---|
-| Photon Fusion 2 | `2.0.12` |
+| Photon Fusion 2 | `2.0.12` and `2.1.3` |
 | Fusion FSM addon (`Fusion.Addons.FSM`) | `2.0.5` |
 
 The FSM addon is a **separate download** from the Fusion SDK. The networked
@@ -178,8 +178,15 @@ session. The only requirements:
 
 ## Newer Fusion versions
 
-This package is validated against **Fusion 2.0.12** and the **2.0.5** FSM addon.
-Newer versions generally work as-is. The one thing that periodically breaks is
+This package is validated against **Fusion 2.0.12 and 2.1.3** and the **2.0.5** FSM addon.
+Newer versions generally work as-is.
+
+**Upgrading Fusion 2.0 to 2.1 in place?** Importing 2.1 over 2.0 leaves 2.0's
+Statistics files behind, and they clash with 2.1's (`'Fusion.Statistics' already
+contains a definition for 'FusionStatistics'`). Back up
+`Assets/Photon/Fusion/Resources/PhotonAppSettings.asset` and
+`NetworkProjectConfig.fusion` (your App ID and weave list), delete
+`Assets/Photon/Fusion`, import the new SDK, then put those two files back. The one thing that periodically breaks is
 `INetworkRunnerCallbacks`: Photon occasionally changes a callback's signature,
 and because the interface must be implemented in full, a changed signature is a
 compile error rather than a warning.

@@ -56,7 +56,7 @@ bake) is left out and everything else still compiles.
 Photon Fusion 2 cannot be redistributed, so it isn't included — and it needs
 **two separate downloads**, both free, from Photon:
 
-1. **Photon Fusion 2** — validated against `2.0.12`
+1. **Photon Fusion 2** — validated against `2.0.12` and `2.1.3`
 2. **The Fusion FSM addon** (`Fusion.Addons.FSM`) — validated against `2.0.5`
 
 The FSM addon is a *separate* download from the Fusion SDK itself. The

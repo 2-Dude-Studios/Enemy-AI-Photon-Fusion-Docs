@@ -19,7 +19,7 @@ both are obtained from Photon Engine under Photon's own licence terms.
 
 | Component | Validated version | Source |
 |---|---|---|
-| Photon Fusion 2 | 2.0.12 | [photonengine.com](https://www.photonengine.com/fusion) |
+| Photon Fusion 2 | 2.0.12, 2.1.3 | [photonengine.com](https://www.photonengine.com/fusion) |
 | Fusion FSM addon (`Fusion.Addons.FSM`) | 2.0.5 | Photon addons |
 | SimpleKCC addon (`Fusion.Addons.SimpleKCC`) — **Fusion demo scenes only** | 2.0.15 | Photon addons |
 
