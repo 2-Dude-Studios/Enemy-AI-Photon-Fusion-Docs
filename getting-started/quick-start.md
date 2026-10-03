@@ -109,7 +109,7 @@ them directly, or reopen the Configurator.
 
 | To change | Edit |
 |---|---|
-| How far it sees, and how wide | `Sense ▸ senseInitDistance`, `fieldOfView` |
+| How far it sees, and how wide | `Sense ▸ senseInitDistance`, `visionAngle` |
 | How quickly it notices you | `Sense ▸ detectionRiseRate` (raise it) |
 | How fast it forgets | `Sense ▸ detectionDecayRate` |
 | How far it chases before giving up | `Combat ▸ rushRange` |
