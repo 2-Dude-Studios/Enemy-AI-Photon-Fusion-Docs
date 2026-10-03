@@ -134,5 +134,7 @@ Configurator preset and a sample scene.
 
 ## Support
 
-Questions, bugs and feature requests are welcome — see the store listing for
-the current contact address.
+Questions, bugs and feature requests are welcome. Email
+**support@2dudestudios.com** and include your Unity version, which runtime you
+use (standalone or Photon Fusion) and any console errors — that usually saves a
+round trip.
