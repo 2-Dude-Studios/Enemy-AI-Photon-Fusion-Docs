@@ -36,27 +36,32 @@ silently starts pointing somewhere else.
 
 | Layer | Used for | Required? |
 |---|---|---|
-| `Obstacle` | Cover geometry — blocks ranged shots and gives the Shooter something to hide behind (`CombatAbilitySO.coverMask`) | Yes, for the Shooter archetype |
-| *(a spare empty layer)* | The default value of vision's `obstacleMask` — see below | Yes, leave one empty |
+| `Obstacle` | Walls and cover — blocks ranged shots, gives the Shooter cover (`CombatAbilitySO.coverMask`), and blocks enemy line of sight (vision `obstacleMask`) | Yes |
+| *(a spare empty layer)* | Fallback for vision's `obstacleMask` when a project has no `Obstacle` layer — see below | Recommended |
 
 Put your **walls and cover** on the `Obstacle` layer. Do **not** put the floor
 on it — see the next section for why that specifically matters.
 
-### Vision line-of-sight is off by default
+### Vision line-of-sight uses the Obstacle layer
 
-`SenseAbilitySO.obstacleMask` ships as `8` — bit 3, which in most projects is
-an **empty layer**. A raycast against an empty layer hits nothing, so
-line-of-sight checks always pass. **Out of the box, enemies can see through
-walls.**
+The shipped sense assets and every enemy the Configurator generates use the
+`Obstacle` layer as vision's `SenseAbilitySO.obstacleMask`, so a wall on that
+layer hides you from the enemy's eyes.
 
-That default is deliberate, because of how the check works: the ray is cast
+**Keep the floor off the `Obstacle` layer.** The line-of-sight ray is cast
 from the enemy's transform position to the target's transform position. Both
 pivots normally sit at **floor level**, so the ray travels along the ground.
 If the floor is on the same layer as your walls, every line-of-sight check is
-blocked by the floor itself and enemies go permanently blind — a far worse
-failure than seeing too much.
+blocked by the floor itself and enemies go permanently blind.
 
-**To enable real wall occlusion:**
+If the project has no `Obstacle` layer when you generate an enemy, the
+Configurator falls back to bit 3, assumed to be an **empty layer**. A raycast
+against an empty layer hits nothing, so line-of-sight checks always pass and
+**that enemy can see through walls**. Create the layer with
+**Tools ▸ EnemyAI ▸ Setup**, then point `obstacleMask` on the enemy's Vision
+`SenseAbilitySO` at it.
+
+**To use a separate sight-blocking layer instead:**
 
 1. Create a dedicated layer for sight blockers — say `SightBlocker`.
 2. Put your **walls on it, and nothing horizontal** (no floors, no ground, no

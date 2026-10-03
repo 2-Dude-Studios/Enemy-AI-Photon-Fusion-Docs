@@ -61,8 +61,8 @@ should be able to slip past.
 
 **Tuning:** `detectionRiseRate` and `detectionDecayRate` are the two dials that
 matter. Raise rise-rate for tenser guards; raise decay for more forgiving ones.
-For real hiding, enable line-of-sight occlusion — see [Required project setup](/getting-started/required-setup.md), since
-it's off by default.
+For real hiding, put your walls on the `Obstacle` layer so they block line of
+sight — see [Required project setup](/getting-started/required-setup.md).
 
 ---
 
